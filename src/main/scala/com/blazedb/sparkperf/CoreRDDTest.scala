@@ -49,8 +49,7 @@ object CoreTestMatrix extends TestMatrix {
       A(20) ,
       A(1),
       0L,
-      10000L,
-      A(true, false)
+      10000L
   )
   def runMatrix(sc: SparkContext, testDimsProd: Product) = {
     val testDims = testDimsProd.asInstanceOf[CoreTestConfig]
@@ -139,7 +138,8 @@ class CoreRDDTest(args: Array[String]) extends AbstractRDDTest[RddKey, RddVal](a
     depthTests()
   }
 
-  val coreTestsFile: String = "config/coreTests.yml"
+  val coreTestsFile: String =
+    s"${java.nio.file.Paths.get("").toAbsolutePath.toString}/config/coreTests.yml"
   override def readTestConfig(ymlFile: String) = {
     val yml = readConfig(ymlFile)
     val conf = CoreTestConfig(
