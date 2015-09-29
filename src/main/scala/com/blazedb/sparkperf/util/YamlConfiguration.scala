@@ -1,11 +1,3 @@
-package com.blazedb.sparkperf.util
-
-import java.io.FileInputStream
-
-import org.yaml.snakeyaml.Yaml
-
-import scala.collection.parallel.mutable
-
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
@@ -22,6 +14,12 @@ import scala.collection.parallel.mutable
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.blazedb.sparkperf.util
+
+import java.io.FileInputStream
+
+import org.yaml.snakeyaml.Yaml
+
 
 /**
  * class YamlConfiguration
